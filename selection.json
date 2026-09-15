@@ -1,0 +1,1116 @@
+{
+  "schema": "reviewer-listening-v1",
+  "selection_policy": {
+    "eligibility": "HARP and SurrRoom; spoken EARS utterances only (exclude nonverbal/vegetative items).",
+    "harp": "Jointly minimize distance to the 20th, 50th and 80th percentiles of GT W decay time, requiring three different room IDs, three directions and exactly two clean / one noisy cases; lexical case ID breaks ties.",
+    "surrroom": "Choose the lowest-SNR spoken case as the challenging condition, then two clean cases nearest the 25th and 50th percentiles of GT W decay time, requiring three distinct physical rooms and directions; lexical case ID breaks ties.",
+    "decay_measure": "Time from aligned direct arrival (sample 128) to -20 dB of backward-integrated GT W energy, over the available 2 s. This is a descriptive decay time, not a fitted RT60 estimate.",
+    "scope": "Illustrative selection, not statistical evaluation. No prediction or prediction error is consulted. Lowest SNR identifies an input condition, not verified model difficulty.",
+    "cube": "Excluded from this first edition. Add only after paired audio is rendered with matching effective GT/prediction support; the short GT must not validate a complete 2 s tail."
+  },
+  "source_bundle": "foa_rec_rtf_harp_phaidra_surrroom_unique_ears20_renderer20260818",
+  "audio_policy": "Byte-identical source FLOAT WAVs; shared_gain binaural pair and dry_ears. Existing 4 s replay crops; no new speech, tail extension, normalization or rerendering.",
+  "selected": [
+    {
+      "group": "harp20",
+      "case_id": "case_16_right_R000980_M02_S05",
+      "room": "R000980",
+      "physical_room": "R000980",
+      "speech_id": "p020/rainbow_05_regular",
+      "eligible": true,
+      "direction": "right",
+      "azimuth": -103.2337217500418,
+      "noisy": false,
+      "snr": null,
+      "decay_seconds": 0.0975,
+      "yaw": 0.0,
+      "common_gain": 1.0,
+      "selection_label": "Shorter decay",
+      "id": "harp-01",
+      "audio": {
+        "dry": {
+          "source": "harp20/case_16_right_R000980_M02_S05/dry_ears.wav",
+          "file": "upload-01-root-and-harp/assets/harp-01/dry.wav",
+          "sha256": "0e672c1d11e6795ecf9fc2538e47658f3d31a9f30751734e9633f557e7078ad9",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 64000,
+          "duration_seconds": 4.0
+        },
+        "gt": {
+          "source": "harp20/case_16_right_R000980_M02_S05/shared_gain/gt_binaural.wav",
+          "file": "upload-01-root-and-harp/assets/harp-01/gt.wav",
+          "sha256": "52c79ac559f2f330ee1e731cba649f8119ddf4b9dde10db0ce98b1535c03c7d6",
+          "sample_rate": 16000,
+          "channels": 2,
+          "frames": 64000,
+          "duration_seconds": 4.0
+        },
+        "pred": {
+          "source": "harp20/case_16_right_R000980_M02_S05/shared_gain/a1_seed42_binaural.wav",
+          "file": "upload-01-root-and-harp/assets/harp-01/pred.wav",
+          "sha256": "accdff11de1d9b970a50ccf45a3d74b3b6d6bef77d890b2b8edc38fdbab41d20",
+          "sample_rate": 16000,
+          "channels": 2,
+          "frames": 64000,
+          "duration_seconds": 4.0
+        }
+      },
+      "plot_settings": {
+        "linear_ylim": [
+          -1.0476626425981521,
+          1.0476626425981521
+        ],
+        "stft": {
+          "window": "hann",
+          "n_fft": 512,
+          "hop": 128,
+          "boundary": "zeros",
+          "padded": true,
+          "scaling": "spectrum",
+          "db_reference": 1.0,
+          "db_limits": [
+            -100,
+            0
+          ]
+        },
+        "normalization": "None added; all channels retain the source RIR W reference scale.",
+        "direct_sample": 128,
+        "early_ms": [
+          -8,
+          80
+        ],
+        "sample_rate": 16000
+      },
+      "rir_sources": {
+        "gt": {
+          "source": "harp20/case_16_right_R000980_M02_S05/rir/gt_full_foa_acn_sn3d.wav",
+          "sha256": "36e234f90da0340a4b70be99a605ad2a62990accc4108d401590e657e2f6f9eb"
+        },
+        "pred": {
+          "source": "harp20/case_16_right_R000980_M02_S05/rir/a1_seed42_full_foa_acn_sn3d.wav",
+          "sha256": "964a84538f9cc6b2ded2d8b9de8cbdb6fb92a01ba4c4027d1ddb55e3d733410b"
+        }
+      },
+      "display_index": 1
+    },
+    {
+      "group": "harp20",
+      "case_id": "case_06_back_R000942_M02_S05",
+      "room": "R000942",
+      "physical_room": "R000942",
+      "speech_id": "p046/emo_desire_freeform",
+      "eligible": true,
+      "direction": "back",
+      "azimuth": 175.54575558692835,
+      "noisy": false,
+      "snr": null,
+      "decay_seconds": 0.1170625,
+      "yaw": 0.0,
+      "common_gain": 0.7171712566614041,
+      "selection_label": "Mid-range decay",
+      "id": "harp-02",
+      "audio": {
+        "dry": {
+          "source": "harp20/case_06_back_R000942_M02_S05/dry_ears.wav",
+          "file": "upload-01-root-and-harp/assets/harp-02/dry.wav",
+          "sha256": "d183172f616e269d1aae579d69faafd413c3cdde5fd4c0ab00fa9cbc2828aa53",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 64000,
+          "duration_seconds": 4.0
+        },
+        "gt": {
+          "source": "harp20/case_06_back_R000942_M02_S05/shared_gain/gt_binaural.wav",
+          "file": "upload-01-root-and-harp/assets/harp-02/gt.wav",
+          "sha256": "ef08e081791c9793c01300a89b819bf9714cbaee822b2112a39c3fb52ce673df",
+          "sample_rate": 16000,
+          "channels": 2,
+          "frames": 64000,
+          "duration_seconds": 4.0
+        },
+        "pred": {
+          "source": "harp20/case_06_back_R000942_M02_S05/shared_gain/a1_seed42_binaural.wav",
+          "file": "upload-01-root-and-harp/assets/harp-02/pred.wav",
+          "sha256": "9d172750b327d00c417133cba6ce583ebb1cbc93b7f5c6e563ff7b42775b58fa",
+          "sample_rate": 16000,
+          "channels": 2,
+          "frames": 64000,
+          "duration_seconds": 4.0
+        }
+      },
+      "plot_settings": {
+        "linear_ylim": [
+          -1.0463822185993195,
+          1.0463822185993195
+        ],
+        "stft": {
+          "window": "hann",
+          "n_fft": 512,
+          "hop": 128,
+          "boundary": "zeros",
+          "padded": true,
+          "scaling": "spectrum",
+          "db_reference": 1.0,
+          "db_limits": [
+            -100,
+            0
+          ]
+        },
+        "normalization": "None added; all channels retain the source RIR W reference scale.",
+        "direct_sample": 128,
+        "early_ms": [
+          -8,
+          80
+        ],
+        "sample_rate": 16000
+      },
+      "rir_sources": {
+        "gt": {
+          "source": "harp20/case_06_back_R000942_M02_S05/rir/gt_full_foa_acn_sn3d.wav",
+          "sha256": "c42ac4a755cfff465af8eb07621bc9f0e7cdb2d6396c5fdb7e79d25b4196a5b1"
+        },
+        "pred": {
+          "source": "harp20/case_06_back_R000942_M02_S05/rir/a1_seed42_full_foa_acn_sn3d.wav",
+          "sha256": "596ef1c340f8e57d4d97b7eb305f9304bdaf8a90c3a7ecad7fa9d736c8fe580c"
+        }
+      },
+      "display_index": 2
+    },
+    {
+      "group": "harp20",
+      "case_id": "case_14_left_R000939_M02_S03",
+      "room": "R000939",
+      "physical_room": "R000939",
+      "speech_id": "p095/rainbow_05_whisper",
+      "eligible": true,
+      "direction": "left",
+      "azimuth": 121.45574748492605,
+      "noisy": true,
+      "snr": 23.427229156011254,
+      "decay_seconds": 0.1893125,
+      "yaw": 0.0,
+      "common_gain": 0.7680810036086183,
+      "selection_label": "Longer decay",
+      "id": "harp-03",
+      "audio": {
+        "dry": {
+          "source": "harp20/case_14_left_R000939_M02_S03/dry_ears.wav",
+          "file": "upload-01-root-and-harp/assets/harp-03/dry.wav",
+          "sha256": "a8fe07853e7de5632cbe50017be8df10e9176f0ce5ef158873d6015356964520",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 64000,
+          "duration_seconds": 4.0
+        },
+        "gt": {
+          "source": "harp20/case_14_left_R000939_M02_S03/shared_gain/gt_binaural.wav",
+          "file": "upload-01-root-and-harp/assets/harp-03/gt.wav",
+          "sha256": "7ca87695e0d5d24256d247c5207aabd71ec88db17976090ca242a788e4e2a013",
+          "sample_rate": 16000,
+          "channels": 2,
+          "frames": 64000,
+          "duration_seconds": 4.0
+        },
+        "pred": {
+          "source": "harp20/case_14_left_R000939_M02_S03/shared_gain/a1_seed42_binaural.wav",
+          "file": "upload-01-root-and-harp/assets/harp-03/pred.wav",
+          "sha256": "287daa42b82b4fd6cbef35e241a1cc79d350476a6e2b58c74b6057031e50d8c5",
+          "sample_rate": 16000,
+          "channels": 2,
+          "frames": 64000,
+          "duration_seconds": 4.0
+        }
+      },
+      "plot_settings": {
+        "linear_ylim": [
+          -1.0481219530105592,
+          1.0481219530105592
+        ],
+        "stft": {
+          "window": "hann",
+          "n_fft": 512,
+          "hop": 128,
+          "boundary": "zeros",
+          "padded": true,
+          "scaling": "spectrum",
+          "db_reference": 1.0,
+          "db_limits": [
+            -100,
+            0
+          ]
+        },
+        "normalization": "None added; all channels retain the source RIR W reference scale.",
+        "direct_sample": 128,
+        "early_ms": [
+          -8,
+          80
+        ],
+        "sample_rate": 16000
+      },
+      "rir_sources": {
+        "gt": {
+          "source": "harp20/case_14_left_R000939_M02_S03/rir/gt_full_foa_acn_sn3d.wav",
+          "sha256": "0beed48c0c61a664cd05bee9b33a7a9612abb96cacda1b2f6b5f581813598554"
+        },
+        "pred": {
+          "source": "harp20/case_14_left_R000939_M02_S03/rir/a1_seed42_full_foa_acn_sn3d.wav",
+          "sha256": "1271e493e66db2df71bd7a1ace84fbf5ffd990ead65d1254e36a5dde612e73cb"
+        }
+      },
+      "display_index": 3
+    },
+    {
+      "group": "surrroom20",
+      "case_id": "case_05_back_surrroom_large_lecture_theatre_d2p5_clean",
+      "room": "large_lecture_theatre",
+      "physical_room": "large_lecture_theatre",
+      "speech_id": "p015/sentences_21_regular",
+      "eligible": true,
+      "direction": "back",
+      "azimuth": 180.0,
+      "noisy": false,
+      "snr": null,
+      "decay_seconds": 0.0898125,
+      "yaw": 180.0,
+      "common_gain": 1.0,
+      "selection_label": "Mid-range decay",
+      "id": "surrroom-05",
+      "audio": {
+        "dry": {
+          "source": "surrroom20/case_05_back_surrroom_large_lecture_theatre_d2p5_clean/dry_ears.wav",
+          "file": "assets/surrroom-05/dry.wav",
+          "sha256": "519409955fbe0095d4ddc5bd42b6395e1cbfabac2f72bb06ff38f0e082158e18",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 64000,
+          "duration_seconds": 4.0
+        },
+        "gt": {
+          "source": "surrroom20/case_05_back_surrroom_large_lecture_theatre_d2p5_clean/shared_gain/gt_binaural.wav",
+          "file": "assets/surrroom-05/gt.wav",
+          "sha256": "b337b987dfd0bfdaa9d46539d5513d2f8c9aa82baca4e042385ab392c39b7bfd",
+          "sample_rate": 16000,
+          "channels": 2,
+          "frames": 64000,
+          "duration_seconds": 4.0
+        },
+        "pred": {
+          "source": "surrroom20/case_05_back_surrroom_large_lecture_theatre_d2p5_clean/shared_gain/a1_seed42_binaural.wav",
+          "file": "assets/surrroom-05/pred.wav",
+          "sha256": "4c7ac4a7286b65bfdb20d3c949e490a32b2a037ade74e00159d9ff881ca3067c",
+          "sample_rate": 16000,
+          "channels": 2,
+          "frames": 64000,
+          "duration_seconds": 4.0
+        }
+      },
+      "plot_settings": {
+        "linear_ylim": [
+          -1.163093376159668,
+          1.163093376159668
+        ],
+        "stft": {
+          "window": "hann",
+          "n_fft": 512,
+          "hop": 128,
+          "boundary": "zeros",
+          "padded": true,
+          "scaling": "spectrum",
+          "db_reference": 1.0,
+          "db_limits": [
+            -100,
+            0
+          ]
+        },
+        "normalization": "None added; all channels retain the source RIR W reference scale.",
+        "direct_sample": 128,
+        "early_ms": [
+          -8,
+          80
+        ],
+        "sample_rate": 16000
+      },
+      "rir_sources": {
+        "gt": {
+          "source": "surrroom20/case_05_back_surrroom_large_lecture_theatre_d2p5_clean/rir/gt_full_foa_acn_sn3d.wav",
+          "sha256": "50455045a06a0f6d9c687fdb6c634e0d3a24726821f43cec2846546e30e321af"
+        },
+        "pred": {
+          "source": "surrroom20/case_05_back_surrroom_large_lecture_theatre_d2p5_clean/rir/a1_seed42_full_foa_acn_sn3d.wav",
+          "sha256": "dd230681415f264816d92ad3f8b302ae8fd591ed103073fde799b7f6327d7e2c"
+        }
+      },
+      "display_index": 4
+    },
+    {
+      "group": "surrroom20",
+      "case_id": "case_16_right_surrroom_listening_room_d2p5_clean",
+      "room": "listening_room",
+      "physical_room": "listening_room",
+      "speech_id": "p019/sentences_02_fast",
+      "eligible": true,
+      "direction": "right",
+      "azimuth": -90.0,
+      "noisy": false,
+      "snr": null,
+      "decay_seconds": 0.0606875,
+      "yaw": -90.0,
+      "common_gain": 0.9146207633452865,
+      "selection_label": "Shorter decay",
+      "id": "surrroom-04",
+      "audio": {
+        "dry": {
+          "source": "surrroom20/case_16_right_surrroom_listening_room_d2p5_clean/dry_ears.wav",
+          "file": "assets/surrroom-04/dry.wav",
+          "sha256": "0fc491eb48fa28c44753686d8c93498ed2c04e02692f6c05a8dbbf43bedcdb09",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 64000,
+          "duration_seconds": 4.0
+        },
+        "gt": {
+          "source": "surrroom20/case_16_right_surrroom_listening_room_d2p5_clean/shared_gain/gt_binaural.wav",
+          "file": "assets/surrroom-04/gt.wav",
+          "sha256": "ebce76c47dbcbfea056f8de118ca3349cfc591f5b0156bc2427b9e42a391a291",
+          "sample_rate": 16000,
+          "channels": 2,
+          "frames": 64000,
+          "duration_seconds": 4.0
+        },
+        "pred": {
+          "source": "surrroom20/case_16_right_surrroom_listening_room_d2p5_clean/shared_gain/a1_seed42_binaural.wav",
+          "file": "assets/surrroom-04/pred.wav",
+          "sha256": "d6c4912efe780bf051d2b30974c5b0bf562946c09915d2dd30fa5b69787fc73d",
+          "sample_rate": 16000,
+          "channels": 2,
+          "frames": 64000,
+          "duration_seconds": 4.0
+        }
+      },
+      "plot_settings": {
+        "linear_ylim": [
+          -1.19028337597847,
+          1.19028337597847
+        ],
+        "stft": {
+          "window": "hann",
+          "n_fft": 512,
+          "hop": 128,
+          "boundary": "zeros",
+          "padded": true,
+          "scaling": "spectrum",
+          "db_reference": 1.0,
+          "db_limits": [
+            -100,
+            0
+          ]
+        },
+        "normalization": "None added; all channels retain the source RIR W reference scale.",
+        "direct_sample": 128,
+        "early_ms": [
+          -8,
+          80
+        ],
+        "sample_rate": 16000
+      },
+      "rir_sources": {
+        "gt": {
+          "source": "surrroom20/case_16_right_surrroom_listening_room_d2p5_clean/rir/gt_full_foa_acn_sn3d.wav",
+          "sha256": "40e457c5013ce070288df8d817eac9da4a986e746b05c9dbc3bf081b16fb22e2"
+        },
+        "pred": {
+          "source": "surrroom20/case_16_right_surrroom_listening_room_d2p5_clean/rir/a1_seed42_full_foa_acn_sn3d.wav",
+          "sha256": "9f19b3d72dbfa781de0160bcb2608e61c05e6aa62d72a0bb670ebaa5a00f1557"
+        }
+      },
+      "display_index": 5
+    },
+    {
+      "group": "surrroom20",
+      "case_id": "case_14_left_surrroom_classical_recording_studio_curtains_open_d2_noisy",
+      "room": "classical_recording_studio_curtains_open",
+      "physical_room": "classical_recording_studio",
+      "speech_id": "p020/rainbow_06_lowpitch",
+      "eligible": true,
+      "direction": "left",
+      "azimuth": 90.0,
+      "noisy": true,
+      "snr": 21.3003030468562,
+      "decay_seconds": 0.21425,
+      "yaw": 90.0,
+      "common_gain": 1.0,
+      "selection_label": "Challenging condition",
+      "id": "surrroom-06",
+      "audio": {
+        "dry": {
+          "source": "surrroom20/case_14_left_surrroom_classical_recording_studio_curtains_open_d2_noisy/dry_ears.wav",
+          "file": "assets/surrroom-06/dry.wav",
+          "sha256": "9fe92e0a0771b8706948f48d42a20a98055f8a590f0d54ea776a028c340447ed",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 64000,
+          "duration_seconds": 4.0
+        },
+        "gt": {
+          "source": "surrroom20/case_14_left_surrroom_classical_recording_studio_curtains_open_d2_noisy/shared_gain/gt_binaural.wav",
+          "file": "assets/surrroom-06/gt.wav",
+          "sha256": "024347631259ec01d686da1268891a8ad12d0203529e3ce22c24059c4b93daa3",
+          "sample_rate": 16000,
+          "channels": 2,
+          "frames": 64000,
+          "duration_seconds": 4.0
+        },
+        "pred": {
+          "source": "surrroom20/case_14_left_surrroom_classical_recording_studio_curtains_open_d2_noisy/shared_gain/a1_seed42_binaural.wav",
+          "file": "assets/surrroom-06/pred.wav",
+          "sha256": "82d58245ce1fde2c53b715336fd96cff2179ecafed5af3785f022537b19ff905",
+          "sample_rate": 16000,
+          "channels": 2,
+          "frames": 64000,
+          "duration_seconds": 4.0
+        }
+      },
+      "plot_settings": {
+        "linear_ylim": [
+          -1.0489426285028458,
+          1.0489426285028458
+        ],
+        "stft": {
+          "window": "hann",
+          "n_fft": 512,
+          "hop": 128,
+          "boundary": "zeros",
+          "padded": true,
+          "scaling": "spectrum",
+          "db_reference": 1.0,
+          "db_limits": [
+            -100,
+            0
+          ]
+        },
+        "normalization": "None added; all channels retain the source RIR W reference scale.",
+        "direct_sample": 128,
+        "early_ms": [
+          -8,
+          80
+        ],
+        "sample_rate": 16000
+      },
+      "rir_sources": {
+        "gt": {
+          "source": "surrroom20/case_14_left_surrroom_classical_recording_studio_curtains_open_d2_noisy/rir/gt_full_foa_acn_sn3d.wav",
+          "sha256": "b8e44fd31753d8ca02c5c75dfc13b31732fbdf0752dff9efcee6f3e56de493f3"
+        },
+        "pred": {
+          "source": "surrroom20/case_14_left_surrroom_classical_recording_studio_curtains_open_d2_noisy/rir/a1_seed42_full_foa_acn_sn3d.wav",
+          "sha256": "3efd586475c0a36adfe844bc465f1f049d5529ebb2b41991edb6765259a50e1a"
+        }
+      },
+      "display_index": 6
+    }
+  ],
+  "candidates": [
+    {
+      "group": "harp20",
+      "case_id": "case_00_front_R000925_M02_S01",
+      "room": "R000925",
+      "physical_room": "R000925",
+      "speech_id": "p095/emo_embarassment_sentences",
+      "eligible": true,
+      "direction": "front",
+      "azimuth": 32.373321472555155,
+      "noisy": false,
+      "snr": null,
+      "decay_seconds": 0.0928125,
+      "yaw": 0.0,
+      "common_gain": 1.0
+    },
+    {
+      "group": "harp20",
+      "case_id": "case_01_front_R000940_M02_S05",
+      "room": "R000940",
+      "physical_room": "R000940",
+      "speech_id": "p019/rainbow_04_loud",
+      "eligible": true,
+      "direction": "front",
+      "azimuth": -24.744948469769195,
+      "noisy": false,
+      "snr": null,
+      "decay_seconds": 0.165625,
+      "yaw": 0.0,
+      "common_gain": 1.0
+    },
+    {
+      "group": "harp20",
+      "case_id": "case_02_front_R000984_M01_S05",
+      "room": "R000984",
+      "physical_room": "R000984",
+      "speech_id": "p020/emo_interest_sentences",
+      "eligible": true,
+      "direction": "front",
+      "azimuth": -1.0340674961549368,
+      "noisy": false,
+      "snr": null,
+      "decay_seconds": 0.1945625,
+      "yaw": 0.0,
+      "common_gain": 0.5369795107362513
+    },
+    {
+      "group": "harp20",
+      "case_id": "case_03_front_R000922_M01_S04",
+      "room": "R000922",
+      "physical_room": "R000922",
+      "speech_id": "p020/sentences_02_lowpitch",
+      "eligible": true,
+      "direction": "front",
+      "azimuth": -43.011899836092105,
+      "noisy": true,
+      "snr": 22.516798003852863,
+      "decay_seconds": 0.102375,
+      "yaw": 0.0,
+      "common_gain": 1.0
+    },
+    {
+      "group": "harp20",
+      "case_id": "case_04_front_R000973_M01_S02",
+      "room": "R000973",
+      "physical_room": "R000973",
+      "speech_id": "p041/emo_amusement_freeform",
+      "eligible": true,
+      "direction": "front",
+      "azimuth": -35.980400051714625,
+      "noisy": true,
+      "snr": 21.418155245969597,
+      "decay_seconds": 0.1135625,
+      "yaw": 0.0,
+      "common_gain": 0.48861319350073706
+    },
+    {
+      "group": "harp20",
+      "case_id": "case_05_back_R000934_M01_S03",
+      "room": "R000934",
+      "physical_room": "R000934",
+      "speech_id": "p020/rainbow_05_lowpitch",
+      "eligible": true,
+      "direction": "back",
+      "azimuth": -148.73766904809122,
+      "noisy": false,
+      "snr": null,
+      "decay_seconds": 0.0748125,
+      "yaw": 0.0,
+      "common_gain": 0.7297695475941721
+    },
+    {
+      "group": "harp20",
+      "case_id": "case_06_back_R000942_M02_S05",
+      "room": "R000942",
+      "physical_room": "R000942",
+      "speech_id": "p046/emo_desire_freeform",
+      "eligible": true,
+      "direction": "back",
+      "azimuth": 175.54575558692835,
+      "noisy": false,
+      "snr": null,
+      "decay_seconds": 0.1170625,
+      "yaw": 0.0,
+      "common_gain": 0.7171712566614041
+    },
+    {
+      "group": "harp20",
+      "case_id": "case_07_back_R000999_M02_S01",
+      "room": "R000999",
+      "physical_room": "R000999",
+      "speech_id": "p020/rainbow_05_highpitch",
+      "eligible": true,
+      "direction": "back",
+      "azimuth": 165.39746371959524,
+      "noisy": true,
+      "snr": 30.739522843805528,
+      "decay_seconds": 0.1146875,
+      "yaw": 0.0,
+      "common_gain": 0.5208580810026395
+    },
+    {
+      "group": "harp20",
+      "case_id": "case_08_back_R000950_M01_S01",
+      "room": "R000950",
+      "physical_room": "R000950",
+      "speech_id": "p004/emo_contentment_sentences",
+      "eligible": true,
+      "direction": "back",
+      "azimuth": 166.19421720640094,
+      "noisy": true,
+      "snr": 20.052222969398702,
+      "decay_seconds": 0.1523125,
+      "yaw": 0.0,
+      "common_gain": 0.7855168470338356
+    },
+    {
+      "group": "harp20",
+      "case_id": "case_09_back_R000962_M01_S03",
+      "room": "R000962",
+      "physical_room": "R000962",
+      "speech_id": "p095/rainbow_08_fast",
+      "eligible": true,
+      "direction": "back",
+      "azimuth": 172.8446514327372,
+      "noisy": true,
+      "snr": 29.044680421229934,
+      "decay_seconds": 0.0516875,
+      "yaw": 0.0,
+      "common_gain": 1.0
+    },
+    {
+      "group": "harp20",
+      "case_id": "case_10_left_R000970_M02_S05",
+      "room": "R000970",
+      "physical_room": "R000970",
+      "speech_id": "p082/sentences_09_fast",
+      "eligible": true,
+      "direction": "left",
+      "azimuth": 81.14375912070325,
+      "noisy": false,
+      "snr": null,
+      "decay_seconds": 0.162875,
+      "yaw": 0.0,
+      "common_gain": 0.5953108123260431
+    },
+    {
+      "group": "harp20",
+      "case_id": "case_11_left_R000946_M02_S04",
+      "room": "R000946",
+      "physical_room": "R000946",
+      "speech_id": "p106/emo_serenity_freeform",
+      "eligible": true,
+      "direction": "left",
+      "azimuth": 103.81743689118927,
+      "noisy": false,
+      "snr": null,
+      "decay_seconds": 0.1049375,
+      "yaw": 0.0,
+      "common_gain": 1.0
+    },
+    {
+      "group": "harp20",
+      "case_id": "case_12_left_R000967_M02_S03",
+      "room": "R000967",
+      "physical_room": "R000967",
+      "speech_id": "p046/nonverbal_crying",
+      "eligible": false,
+      "direction": "left",
+      "azimuth": 108.8378940766351,
+      "noisy": false,
+      "snr": null,
+      "decay_seconds": 0.0675,
+      "yaw": 0.0,
+      "common_gain": 1.0
+    },
+    {
+      "group": "harp20",
+      "case_id": "case_13_left_R000971_M02_S03",
+      "room": "R000971",
+      "physical_room": "R000971",
+      "speech_id": "p082/emo_serenity_freeform",
+      "eligible": true,
+      "direction": "left",
+      "azimuth": 99.61592740838977,
+      "noisy": true,
+      "snr": 30.666669325766932,
+      "decay_seconds": 0.2861875,
+      "yaw": 0.0,
+      "common_gain": 1.0
+    },
+    {
+      "group": "harp20",
+      "case_id": "case_14_left_R000939_M02_S03",
+      "room": "R000939",
+      "physical_room": "R000939",
+      "speech_id": "p095/rainbow_05_whisper",
+      "eligible": true,
+      "direction": "left",
+      "azimuth": 121.45574748492605,
+      "noisy": true,
+      "snr": 23.427229156011254,
+      "decay_seconds": 0.1893125,
+      "yaw": 0.0,
+      "common_gain": 0.7680810036086183
+    },
+    {
+      "group": "harp20",
+      "case_id": "case_15_right_R000987_M02_S03",
+      "room": "R000987",
+      "physical_room": "R000987",
+      "speech_id": "p004/sentences_02_lowpitch",
+      "eligible": true,
+      "direction": "right",
+      "azimuth": -80.61903109452538,
+      "noisy": false,
+      "snr": null,
+      "decay_seconds": 0.1854375,
+      "yaw": 0.0,
+      "common_gain": 0.9356793874272102
+    },
+    {
+      "group": "harp20",
+      "case_id": "case_16_right_R000980_M02_S05",
+      "room": "R000980",
+      "physical_room": "R000980",
+      "speech_id": "p020/rainbow_05_regular",
+      "eligible": true,
+      "direction": "right",
+      "azimuth": -103.2337217500418,
+      "noisy": false,
+      "snr": null,
+      "decay_seconds": 0.0975,
+      "yaw": 0.0,
+      "common_gain": 1.0
+    },
+    {
+      "group": "harp20",
+      "case_id": "case_17_right_R000982_M02_S01",
+      "room": "R000982",
+      "physical_room": "R000982",
+      "speech_id": "p082/freeform_speech_02",
+      "eligible": true,
+      "direction": "right",
+      "azimuth": -61.25428787017416,
+      "noisy": true,
+      "snr": 23.68735795445479,
+      "decay_seconds": 0.079875,
+      "yaw": 0.0,
+      "common_gain": 1.0
+    },
+    {
+      "group": "harp20",
+      "case_id": "case_18_right_R000959_M02_S04",
+      "room": "R000959",
+      "physical_room": "R000959",
+      "speech_id": "p015/emo_guilt_freeform",
+      "eligible": true,
+      "direction": "right",
+      "azimuth": -68.6763155185759,
+      "noisy": true,
+      "snr": 32.03801091187479,
+      "decay_seconds": 0.2006875,
+      "yaw": 0.0,
+      "common_gain": 0.31559784519076667
+    },
+    {
+      "group": "harp20",
+      "case_id": "case_19_right_R000991_M01_S05",
+      "room": "R000991",
+      "physical_room": "R000991",
+      "speech_id": "p082/rainbow_03_regular",
+      "eligible": true,
+      "direction": "right",
+      "azimuth": -64.7617120673694,
+      "noisy": true,
+      "snr": 23.303248440109797,
+      "decay_seconds": 0.1486875,
+      "yaw": 0.0,
+      "common_gain": 1.0
+    },
+    {
+      "group": "surrroom20",
+      "case_id": "case_00_front_surrroom_classical_recording_studio_curtains_open_d1p5_clean",
+      "room": "classical_recording_studio_curtains_open",
+      "physical_room": "classical_recording_studio",
+      "speech_id": "p095/nonverbal_yelling",
+      "eligible": false,
+      "direction": "front",
+      "azimuth": 0.0,
+      "noisy": false,
+      "snr": null,
+      "decay_seconds": 0.1839375,
+      "yaw": 0.0,
+      "common_gain": 1.0
+    },
+    {
+      "group": "surrroom20",
+      "case_id": "case_01_front_surrroom_pop_recording_studio_d2p5_clean",
+      "room": "pop_recording_studio",
+      "physical_room": "pop_recording_studio",
+      "speech_id": "p015/rainbow_06_slow",
+      "eligible": true,
+      "direction": "front",
+      "azimuth": 0.0,
+      "noisy": false,
+      "snr": null,
+      "decay_seconds": 0.0675,
+      "yaw": 0.0,
+      "common_gain": 0.9880514154677248
+    },
+    {
+      "group": "surrroom20",
+      "case_id": "case_02_front_surrroom_large_classroom_d2_clean",
+      "room": "large_classroom",
+      "physical_room": "large_classroom",
+      "speech_id": "p020/rainbow_04_highpitch",
+      "eligible": true,
+      "direction": "front",
+      "azimuth": 0.0,
+      "noisy": false,
+      "snr": null,
+      "decay_seconds": 0.1694375,
+      "yaw": 0.0,
+      "common_gain": 1.0
+    },
+    {
+      "group": "surrroom20",
+      "case_id": "case_03_front_surrroom_living_room_lab_d1_noisy",
+      "room": "living_room_lab",
+      "physical_room": "living_room_lab",
+      "speech_id": "p004/rainbow_08_whisper",
+      "eligible": true,
+      "direction": "front",
+      "azimuth": 0.0,
+      "noisy": true,
+      "snr": 29.601621244719006,
+      "decay_seconds": 0.060625,
+      "yaw": 0.0,
+      "common_gain": 1.0
+    },
+    {
+      "group": "surrroom20",
+      "case_id": "case_04_front_surrroom_small_lecture_theatre_d3_noisy",
+      "room": "small_lecture_theatre",
+      "physical_room": "small_lecture_theatre",
+      "speech_id": "p095/sentences_01_loud",
+      "eligible": true,
+      "direction": "front",
+      "azimuth": 0.0,
+      "noisy": true,
+      "snr": 27.47620343338796,
+      "decay_seconds": 0.173,
+      "yaw": 0.0,
+      "common_gain": 0.8444922297637403
+    },
+    {
+      "group": "surrroom20",
+      "case_id": "case_05_back_surrroom_large_lecture_theatre_d2p5_clean",
+      "room": "large_lecture_theatre",
+      "physical_room": "large_lecture_theatre",
+      "speech_id": "p015/sentences_21_regular",
+      "eligible": true,
+      "direction": "back",
+      "azimuth": 180.0,
+      "noisy": false,
+      "snr": null,
+      "decay_seconds": 0.0898125,
+      "yaw": 180.0,
+      "common_gain": 1.0
+    },
+    {
+      "group": "surrroom20",
+      "case_id": "case_06_back_surrroom_listening_room_d3_clean",
+      "room": "listening_room",
+      "physical_room": "listening_room",
+      "speech_id": "p096/sentences_02_fast",
+      "eligible": true,
+      "direction": "back",
+      "azimuth": 180.0,
+      "noisy": false,
+      "snr": null,
+      "decay_seconds": 0.0608125,
+      "yaw": 180.0,
+      "common_gain": 0.992301226502556
+    },
+    {
+      "group": "surrroom20",
+      "case_id": "case_07_back_surrroom_classical_recording_studio_curtains_closed_d1p5_noisy",
+      "room": "classical_recording_studio_curtains_closed",
+      "physical_room": "classical_recording_studio",
+      "speech_id": "p095/emo_pride_sentences",
+      "eligible": true,
+      "direction": "back",
+      "azimuth": 180.0,
+      "noisy": true,
+      "snr": 31.196159105109782,
+      "decay_seconds": 0.1255,
+      "yaw": 180.0,
+      "common_gain": 1.0
+    },
+    {
+      "group": "surrroom20",
+      "case_id": "case_08_back_surrroom_large_lecture_theatre_d2_noisy",
+      "room": "large_lecture_theatre",
+      "physical_room": "large_lecture_theatre",
+      "speech_id": "p096/rainbow_07_lowpitch",
+      "eligible": true,
+      "direction": "back",
+      "azimuth": 180.0,
+      "noisy": true,
+      "snr": 21.995494047948558,
+      "decay_seconds": 0.088125,
+      "yaw": 180.0,
+      "common_gain": 0.8123392075154737
+    },
+    {
+      "group": "surrroom20",
+      "case_id": "case_09_back_surrroom_pop_recording_studio_d1_noisy",
+      "room": "pop_recording_studio",
+      "physical_room": "pop_recording_studio",
+      "speech_id": "p015/rainbow_03_loud",
+      "eligible": true,
+      "direction": "back",
+      "azimuth": 180.0,
+      "noisy": true,
+      "snr": 29.39998927205695,
+      "decay_seconds": 0.040875,
+      "yaw": 180.0,
+      "common_gain": 1.0
+    },
+    {
+      "group": "surrroom20",
+      "case_id": "case_10_left_surrroom_listening_room_d1p5_clean",
+      "room": "listening_room",
+      "physical_room": "listening_room",
+      "speech_id": "p096/sentences_09_fast",
+      "eligible": true,
+      "direction": "left",
+      "azimuth": 90.0,
+      "noisy": false,
+      "snr": null,
+      "decay_seconds": 0.0523125,
+      "yaw": 90.0,
+      "common_gain": 0.7530709566216605
+    },
+    {
+      "group": "surrroom20",
+      "case_id": "case_11_left_surrroom_small_lecture_theatre_d1_clean",
+      "room": "small_lecture_theatre",
+      "physical_room": "small_lecture_theatre",
+      "speech_id": "p004/rainbow_06_loud",
+      "eligible": true,
+      "direction": "left",
+      "azimuth": 90.0,
+      "noisy": false,
+      "snr": null,
+      "decay_seconds": 0.0975625,
+      "yaw": 90.0,
+      "common_gain": 1.0
+    },
+    {
+      "group": "surrroom20",
+      "case_id": "case_12_left_surrroom_living_room_lab_d3_clean",
+      "room": "living_room_lab",
+      "physical_room": "living_room_lab",
+      "speech_id": "p046/rainbow_02_loud",
+      "eligible": true,
+      "direction": "left",
+      "azimuth": 90.0,
+      "noisy": false,
+      "snr": null,
+      "decay_seconds": 0.0838125,
+      "yaw": 90.0,
+      "common_gain": 1.0
+    },
+    {
+      "group": "surrroom20",
+      "case_id": "case_13_left_surrroom_classical_recording_studio_curtains_closed_d2p5_noisy",
+      "room": "classical_recording_studio_curtains_closed",
+      "physical_room": "classical_recording_studio",
+      "speech_id": "p015/rainbow_01_slow",
+      "eligible": true,
+      "direction": "left",
+      "azimuth": 90.0,
+      "noisy": true,
+      "snr": 30.912654775631697,
+      "decay_seconds": 0.185,
+      "yaw": 90.0,
+      "common_gain": 1.0
+    },
+    {
+      "group": "surrroom20",
+      "case_id": "case_14_left_surrroom_classical_recording_studio_curtains_open_d2_noisy",
+      "room": "classical_recording_studio_curtains_open",
+      "physical_room": "classical_recording_studio",
+      "speech_id": "p020/rainbow_06_lowpitch",
+      "eligible": true,
+      "direction": "left",
+      "azimuth": 90.0,
+      "noisy": true,
+      "snr": 21.3003030468562,
+      "decay_seconds": 0.21425,
+      "yaw": 90.0,
+      "common_gain": 1.0
+    },
+    {
+      "group": "surrroom20",
+      "case_id": "case_15_right_surrroom_large_classroom_d1_clean",
+      "room": "large_classroom",
+      "physical_room": "large_classroom",
+      "speech_id": "p019/rainbow_06_lowpitch",
+      "eligible": true,
+      "direction": "right",
+      "azimuth": -90.0,
+      "noisy": false,
+      "snr": null,
+      "decay_seconds": 0.1359375,
+      "yaw": -90.0,
+      "common_gain": 1.0
+    },
+    {
+      "group": "surrroom20",
+      "case_id": "case_16_right_surrroom_listening_room_d2p5_clean",
+      "room": "listening_room",
+      "physical_room": "listening_room",
+      "speech_id": "p019/sentences_02_fast",
+      "eligible": true,
+      "direction": "right",
+      "azimuth": -90.0,
+      "noisy": false,
+      "snr": null,
+      "decay_seconds": 0.0606875,
+      "yaw": -90.0,
+      "common_gain": 0.9146207633452865
+    },
+    {
+      "group": "surrroom20",
+      "case_id": "case_17_right_surrroom_small_lecture_theatre_d2_noisy",
+      "room": "small_lecture_theatre",
+      "physical_room": "small_lecture_theatre",
+      "speech_id": "p004/sentences_11_highpitch",
+      "eligible": true,
+      "direction": "right",
+      "azimuth": -90.0,
+      "noisy": true,
+      "snr": 32.73064696599968,
+      "decay_seconds": 0.143625,
+      "yaw": -90.0,
+      "common_gain": 1.0
+    },
+    {
+      "group": "surrroom20",
+      "case_id": "case_18_right_surrroom_pop_recording_studio_d1p5_noisy",
+      "room": "pop_recording_studio",
+      "physical_room": "pop_recording_studio",
+      "speech_id": "p020/emo_pride_sentences",
+      "eligible": true,
+      "direction": "right",
+      "azimuth": -90.0,
+      "noisy": true,
+      "snr": 32.27333375077964,
+      "decay_seconds": 0.0645,
+      "yaw": -90.0,
+      "common_gain": 0.9370521248761982
+    },
+    {
+      "group": "surrroom20",
+      "case_id": "case_19_right_surrroom_classical_recording_studio_curtains_open_d3_noisy",
+      "room": "classical_recording_studio_curtains_open",
+      "physical_room": "classical_recording_studio",
+      "speech_id": "p096/emo_cuteness_freeform",
+      "eligible": true,
+      "direction": "right",
+      "azimuth": -90.0,
+      "noisy": true,
+      "snr": 26.988663485143917,
+      "decay_seconds": 0.2561875,
+      "yaw": -90.0,
+      "common_gain": 1.0
+    }
+  ],
+  "hosting_layout_note": "HARP assets retain the existing upload-01-root-and-harp prefix; SurrRoom assets are under root assets. Audio files are unchanged."
+}

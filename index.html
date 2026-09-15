@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="FOA-Rec-RTF listening examples: paired ground-truth and predicted binaural speech with four-channel room impulse response comparisons.">
+  <meta name="theme-color" content="#f6f8fb">
+  <title>FOA-Rec-RTF · Listening samples</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%232469d8'/%3E%3Cpath d='M8 14v4m5-10v16m6-13v10m5-7v4' stroke='white' stroke-width='2.5' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="upload-01-root-and-harp/styles.css">
+  <script src="upload-01-root-and-harp/app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#samples">Skip to listening samples</a>
+  <header class="site-header"><a href="#" class="brand"><span class="brand-icon" aria-hidden="true">ıⅠı</span> FOA-Rec-RTF</a><nav aria-label="Main navigation"><a href="#harp">HARP</a><a href="#surrroom">SurrRoom</a><a href="#protocol">Listening notes</a></nav></header>
+  <main>
+    <section class="hero">
+      <p class="eyebrow">SUPPLEMENTARY AUDIO <span class="small-line"></span> FIRST-ORDER AMBISONICS</p>
+      <h1>Listen to the room.<br><span>Compare the reconstruction.</span></h1>
+      <p class="intro">Explore ground-truth and predicted room responses through paired binaural speech. Listen first, then inspect the spectral and temporal detail of all four FOA channels.</p>
+      <div class="hero-bottom"><a href="#samples" class="hero-link">Explore listening samples <span aria-hidden="true">↓</span></a><p>06 samples <span> / </span> 02 datasets <span> / </span> 04 FOA channels</p></div>
+    </section>
+    <aside class="listening-guide" aria-label="How to listen"><div class="headphones" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 14v-3a8 8 0 0 1 16 0v3M4 12h2v8H4a2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2Zm16 0h-2v8h2a2 2 0 0 0 2-2v-4a2 2 0 0 0-2-2Z"/></svg></div><div><strong>Best experienced with headphones</strong><p>Start with dry speech, then switch between GT and Predicted. The pair shares a playback position and gain; only one clip plays at a time.</p></div><button type="button" id="pause-all">Pause all <span aria-hidden="true">Ⅱ</span></button></aside>
+    <p class="excerpt-note">These are the existing <strong>4-second excerpts</strong>, with 2-second RIRs shown below. Audio is cropped from longer speech convolutions and does not include the complete post-speech tail.</p>
+    <div id="samples"><section id="harp" class="dataset"><div class="section-heading"><div><p class="eyebrow">DATASET</p><h2>HARP</h2></div><p>Three rooms, three source directions, a range of decay lengths.</p></div><article class="sample" id="harp-01" data-plots="upload-01-root-and-harp/assets/harp-01">
+      <div class="sample-top"><div><p class="eyebrow">SAMPLE 01 <span> / Shorter decay</span></p><h3>R000980</h3></div><a class="permalink" href="#harp-01" aria-label="Link to sample 1"># 01</a></div>
+      <p class="case-id">case_16_right_R000980_M02_S05</p>
+      <div class="tags"><span>Right · -103.2°</span><span>Clean condition</span><span>GT decay to −20 dB: 98 ms</span></div>
+      <div class="players"><div class="player dry"><div class="player-heading"><span class="dot"></span><h4>Dry speech</h4></div>
+          <p>EARS · mono</p><audio controls preload="none" data-role="dry" aria-label="HARP R000980 Dry speech" src="upload-01-root-and-harp/assets/harp-01/dry.wav"></audio>
+          <a class="download" href="upload-01-root-and-harp/assets/harp-01/dry.wav" download>Download WAV <span aria-hidden="true">↗</span></a></div><div class="player gt"><div class="player-heading"><span class="dot"></span><h4>GT reverberant speech</h4></div>
+          <p>Reference · binaural</p><audio controls preload="none" data-role="gt" aria-label="HARP R000980 GT reverberant speech" src="upload-01-root-and-harp/assets/harp-01/gt.wav"></audio>
+          <a class="download" href="upload-01-root-and-harp/assets/harp-01/gt.wav" download>Download WAV <span aria-hidden="true">↗</span></a></div><div class="player pred"><div class="player-heading"><span class="dot"></span><h4>Predicted reverberant speech</h4></div>
+          <p>FOA-Rec-RTF · binaural</p><audio controls preload="none" data-role="pred" aria-label="HARP R000980 Predicted reverberant speech" src="upload-01-root-and-harp/assets/harp-01/pred.wav"></audio>
+          <a class="download" href="upload-01-root-and-harp/assets/harp-01/pred.wav" download>Download WAV <span aria-hidden="true">↗</span></a></div></div>
+      <div class="compare"><span>Compare at the same time position</span><div><button type="button" class="switch" data-switch="gt">Listen to GT</button><button type="button" class="switch primary" data-switch="pred">Listen to Predicted</button><button type="button" class="restart">↺ Restart pair</button></div></div>
+      <p class="playback-status" role="status" aria-live="polite"></p>
+      <details class="rir"><summary>View RIR comparison <span>4 channels · spectrograms &amp; waveforms</span></summary>
+        <div class="visuals"><div class="plot-toolbar"><div class="control-label">FOA channel <div class="segmented" role="group" aria-label="FOA channel"><button type="button" data-channel="W" aria-pressed="true">W</button><button type="button" data-channel="X" aria-pressed="false">X</button><button type="button" data-channel="Y" aria-pressed="false">Y</button><button type="button" data-channel="Z" aria-pressed="false">Z</button></div></div>
+        <div class="control-label">Waveform window <div class="segmented" role="group" aria-label="Waveform window"><button type="button" data-window="early" aria-pressed="true">Early</button><button type="button" data-window="full" aria-pressed="false">Full response</button></div></div></div>
+        <div class="spectrograms"><figure><figcaption>GT <span class="channel-name">W</span></figcaption><img data-plot="gt" width="824" height="391" alt=""></figure><figure><figcaption>Predicted <span class="channel-name">W</span></figcaption><img data-plot="pred" width="824" height="391" alt=""></figure></div>
+        <figure class="waveform"><figcaption>Waveform overlay <span class="window-name">Early · −8 to +80 ms</span></figcaption><img data-plot="wave" width="1647" height="378" alt=""></figure>
+        <p class="plot-note">GT: dark grey · Predicted: blue. Original W reference scale retained across channels. Shared STFT settings and fixed −100 to 0 dB color scale; no per-channel or per-image normalization. Early time is relative to aligned direct arrival.</p></div>
+      </details><p class="sample-note">4 s excerpt · paired gain ×1. No background noise was added. Source direction follows the native dataset geometry. EARS: p020/rainbow_05_regular.</p>
+    </article><article class="sample" id="harp-02" data-plots="upload-01-root-and-harp/assets/harp-02">
+      <div class="sample-top"><div><p class="eyebrow">SAMPLE 02 <span> / Mid-range decay</span></p><h3>R000942</h3></div><a class="permalink" href="#harp-02" aria-label="Link to sample 2"># 02</a></div>
+      <p class="case-id">case_06_back_R000942_M02_S05</p>
+      <div class="tags"><span>Back · +175.5°</span><span>Clean condition</span><span>GT decay to −20 dB: 117 ms</span></div>
+      <div class="players"><div class="player dry"><div class="player-heading"><span class="dot"></span><h4>Dry speech</h4></div>
+          <p>EARS · mono</p><audio controls preload="none" data-role="dry" aria-label="HARP R000942 Dry speech" src="upload-01-root-and-harp/assets/harp-02/dry.wav"></audio>
+          <a class="download" href="upload-01-root-and-harp/assets/harp-02/dry.wav" download>Download WAV <span aria-hidden="true">↗</span></a></div><div class="player gt"><div class="player-heading"><span class="dot"></span><h4>GT reverberant speech</h4></div>
+          <p>Reference · binaural</p><audio controls preload="none" data-role="gt" aria-label="HARP R000942 GT reverberant speech" src="upload-01-root-and-harp/assets/harp-02/gt.wav"></audio>
+          <a class="download" href="upload-01-root-and-harp/assets/harp-02/gt.wav" download>Download WAV <span aria-hidden="true">↗</span></a></div><div class="player pred"><div class="player-heading"><span class="dot"></span><h4>Predicted reverberant speech</h4></div>
+          <p>FOA-Rec-RTF · binaural</p><audio controls preload="none" data-role="pred" aria-label="HARP R000942 Predicted reverberant speech" src="upload-01-root-and-harp/assets/harp-02/pred.wav"></audio>
+          <a class="download" href="upload-01-root-and-harp/assets/harp-02/pred.wav" download>Download WAV <span aria-hidden="true">↗</span></a></div></div>
+      <div class="compare"><span>Compare at the same time position</span><div><button type="button" class="switch" data-switch="gt">Listen to GT</button><button type="button" class="switch primary" data-switch="pred">Listen to Predicted</button><button type="button" class="restart">↺ Restart pair</button></div></div>
+      <p class="playback-status" role="status" aria-live="polite"></p>
+      <details class="rir"><summary>View RIR comparison <span>4 channels · spectrograms &amp; waveforms</span></summary>
+        <div class="visuals"><div class="plot-toolbar"><div class="control-label">FOA channel <div class="segmented" role="group" aria-label="FOA channel"><button type="button" data-channel="W" aria-pressed="true">W</button><button type="button" data-channel="X" aria-pressed="false">X</button><button type="button" data-channel="Y" aria-pressed="false">Y</button><button type="button" data-channel="Z" aria-pressed="false">Z</button></div></div>
+        <div class="control-label">Waveform window <div class="segmented" role="group" aria-label="Waveform window"><button type="button" data-window="early" aria-pressed="true">Early</button><button type="button" data-window="full" aria-pressed="false">Full response</button></div></div></div>
+        <div class="spectrograms"><figure><figcaption>GT <span class="channel-name">W</span></figcaption><img data-plot="gt" width="824" height="391" alt=""></figure><figure><figcaption>Predicted <span class="channel-name">W</span></figcaption><img data-plot="pred" width="824" height="391" alt=""></figure></div>
+        <figure class="waveform"><figcaption>Waveform overlay <span class="window-name">Early · −8 to +80 ms</span></figcaption><img data-plot="wave" width="1647" height="378" alt=""></figure>
+        <p class="plot-note">GT: dark grey · Predicted: blue. Original W reference scale retained across channels. Shared STFT settings and fixed −100 to 0 dB color scale; no per-channel or per-image normalization. Early time is relative to aligned direct arrival.</p></div>
+      </details><p class="sample-note">4 s excerpt · paired gain ×0.7172. No background noise was added. Source direction follows the native dataset geometry. EARS: p046/emo_desire_freeform.</p>
+    </article><article class="sample" id="harp-03" data-plots="upload-01-root-and-harp/assets/harp-03">
+      <div class="sample-top"><div><p class="eyebrow">SAMPLE 03 <span> / Longer decay</span></p><h3>R000939</h3></div><a class="permalink" href="#harp-03" aria-label="Link to sample 3"># 03</a></div>
+      <p class="case-id">case_14_left_R000939_M02_S03</p>
+      <div class="tags"><span>Left · +121.5°</span><span>Paired noise · 23.4 dB SNR</span><span>GT decay to −20 dB: 189 ms</span></div>
+      <div class="players"><div class="player dry"><div class="player-heading"><span class="dot"></span><h4>Dry speech</h4></div>
+          <p>EARS · mono</p><audio controls preload="none" data-role="dry" aria-label="HARP R000939 Dry speech" src="upload-01-root-and-harp/assets/harp-03/dry.wav"></audio>
+          <a class="download" href="upload-01-root-and-harp/assets/harp-03/dry.wav" download>Download WAV <span aria-hidden="true">↗</span></a></div><div class="player gt"><div class="player-heading"><span class="dot"></span><h4>GT reverberant speech</h4></div>
+          <p>Reference · binaural</p><audio controls preload="none" data-role="gt" aria-label="HARP R000939 GT reverberant speech" src="upload-01-root-and-harp/assets/harp-03/gt.wav"></audio>
+          <a class="download" href="upload-01-root-and-harp/assets/harp-03/gt.wav" download>Download WAV <span aria-hidden="true">↗</span></a></div><div class="player pred"><div class="player-heading"><span class="dot"></span><h4>Predicted reverberant speech</h4></div>
+          <p>FOA-Rec-RTF · binaural</p><audio controls preload="none" data-role="pred" aria-label="HARP R000939 Predicted reverberant speech" src="upload-01-root-and-harp/assets/harp-03/pred.wav"></audio>
+          <a class="download" href="upload-01-root-and-harp/assets/harp-03/pred.wav" download>Download WAV <span aria-hidden="true">↗</span></a></div></div>
+      <div class="compare"><span>Compare at the same time position</span><div><button type="button" class="switch" data-switch="gt">Listen to GT</button><button type="button" class="switch primary" data-switch="pred">Listen to Predicted</button><button type="button" class="restart">↺ Restart pair</button></div></div>
+      <p class="playback-status" role="status" aria-live="polite"></p>
+      <details class="rir"><summary>View RIR comparison <span>4 channels · spectrograms &amp; waveforms</span></summary>
+        <div class="visuals"><div class="plot-toolbar"><div class="control-label">FOA channel <div class="segmented" role="group" aria-label="FOA channel"><button type="button" data-channel="W" aria-pressed="true">W</button><button type="button" data-channel="X" aria-pressed="false">X</button><button type="button" data-channel="Y" aria-pressed="false">Y</button><button type="button" data-channel="Z" aria-pressed="false">Z</button></div></div>
+        <div class="control-label">Waveform window <div class="segmented" role="group" aria-label="Waveform window"><button type="button" data-window="early" aria-pressed="true">Early</button><button type="button" data-window="full" aria-pressed="false">Full response</button></div></div></div>
+        <div class="spectrograms"><figure><figcaption>GT <span class="channel-name">W</span></figcaption><img data-plot="gt" width="824" height="391" alt=""></figure><figure><figcaption>Predicted <span class="channel-name">W</span></figcaption><img data-plot="pred" width="824" height="391" alt=""></figure></div>
+        <figure class="waveform"><figcaption>Waveform overlay <span class="window-name">Early · −8 to +80 ms</span></figcaption><img data-plot="wave" width="1647" height="378" alt=""></figure>
+        <p class="plot-note">GT: dark grey · Predicted: blue. Original W reference scale retained across channels. Shared STFT settings and fixed −100 to 0 dB color scale; no per-channel or per-image normalization. Early time is relative to aligned direct arrival.</p></div>
+      </details><p class="sample-note">4 s excerpt · paired gain ×0.7681. The same GT-calibrated noise realization is included in both reverberant clips. Source direction follows the native dataset geometry. EARS: p095/rainbow_05_whisper.</p>
+    </article></section>
+<section id="surrroom" class="dataset"><div class="section-heading"><div><p class="eyebrow">DATASET</p><h2>SurrRoom</h2></div><p>Three measured rooms, including a lower-SNR listening condition.</p></div><article class="sample" id="surrroom-05" data-plots="assets/surrroom-05">
+      <div class="sample-top"><div><p class="eyebrow">SAMPLE 04 <span> / Mid-range decay</span></p><h3>Large lecture theatre</h3></div><a class="permalink" href="#surrroom-05" aria-label="Link to sample 4"># 04</a></div>
+      <p class="case-id">case_05_back_surrroom_large_lecture_theatre_d2p5_clean</p>
+      <div class="tags"><span>Back · +180.0°</span><span>Clean condition</span><span>GT decay to −20 dB: 90 ms</span></div>
+      <div class="players"><div class="player dry"><div class="player-heading"><span class="dot"></span><h4>Dry speech</h4></div>
+          <p>EARS · mono</p><audio controls preload="none" data-role="dry" aria-label="SurrRoom Large lecture theatre Dry speech" src="assets/surrroom-05/dry.wav"></audio>
+          <a class="download" href="assets/surrroom-05/dry.wav" download>Download WAV <span aria-hidden="true">↗</span></a></div><div class="player gt"><div class="player-heading"><span class="dot"></span><h4>GT reverberant speech</h4></div>
+          <p>Reference · binaural</p><audio controls preload="none" data-role="gt" aria-label="SurrRoom Large lecture theatre GT reverberant speech" src="assets/surrroom-05/gt.wav"></audio>
+          <a class="download" href="assets/surrroom-05/gt.wav" download>Download WAV <span aria-hidden="true">↗</span></a></div><div class="player pred"><div class="player-heading"><span class="dot"></span><h4>Predicted reverberant speech</h4></div>
+          <p>FOA-Rec-RTF · binaural</p><audio controls preload="none" data-role="pred" aria-label="SurrRoom Large lecture theatre Predicted reverberant speech" src="assets/surrroom-05/pred.wav"></audio>
+          <a class="download" href="assets/surrroom-05/pred.wav" download>Download WAV <span aria-hidden="true">↗</span></a></div></div>
+      <div class="compare"><span>Compare at the same time position</span><div><button type="button" class="switch" data-switch="gt">Listen to GT</button><button type="button" class="switch primary" data-switch="pred">Listen to Predicted</button><button type="button" class="restart">↺ Restart pair</button></div></div>
+      <p class="playback-status" role="status" aria-live="polite"></p>
+      <details class="rir"><summary>View RIR comparison <span>4 channels · spectrograms &amp; waveforms</span></summary>
+        <div class="visuals"><div class="plot-toolbar"><div class="control-label">FOA channel <div class="segmented" role="group" aria-label="FOA channel"><button type="button" data-channel="W" aria-pressed="true">W</button><button type="button" data-channel="X" aria-pressed="false">X</button><button type="button" data-channel="Y" aria-pressed="false">Y</button><button type="button" data-channel="Z" aria-pressed="false">Z</button></div></div>
+        <div class="control-label">Waveform window <div class="segmented" role="group" aria-label="Waveform window"><button type="button" data-window="early" aria-pressed="true">Early</button><button type="button" data-window="full" aria-pressed="false">Full response</button></div></div></div>
+        <div class="spectrograms"><figure><figcaption>GT <span class="channel-name">W</span></figcaption><img data-plot="gt" width="824" height="391" alt=""></figure><figure><figcaption>Predicted <span class="channel-name">W</span></figcaption><img data-plot="pred" width="824" height="391" alt=""></figure></div>
+        <figure class="waveform"><figcaption>Waveform overlay <span class="window-name">Early · −8 to +80 ms</span></figcaption><img data-plot="wave" width="1647" height="378" alt=""></figure>
+        <p class="plot-note">GT: dark grey · Predicted: blue. Original W reference scale retained across channels. Shared STFT settings and fixed −100 to 0 dB color scale; no per-channel or per-image normalization. Early time is relative to aligned direct arrival.</p></div>
+      </details><p class="sample-note">4 s excerpt · paired gain ×1. No background noise was added. Listening-only FOA yaw: 180°; the original measured source direction is front. EARS: p015/sentences_21_regular.</p>
+    </article><article class="sample" id="surrroom-04" data-plots="assets/surrroom-04">
+      <div class="sample-top"><div><p class="eyebrow">SAMPLE 05 <span> / Shorter decay</span></p><h3>Listening room</h3></div><a class="permalink" href="#surrroom-04" aria-label="Link to sample 5"># 05</a></div>
+      <p class="case-id">case_16_right_surrroom_listening_room_d2p5_clean</p>
+      <div class="tags"><span>Right · -90.0°</span><span>Clean condition</span><span>GT decay to −20 dB: 61 ms</span></div>
+      <div class="players"><div class="player dry"><div class="player-heading"><span class="dot"></span><h4>Dry speech</h4></div>
+          <p>EARS · mono</p><audio controls preload="none" data-role="dry" aria-label="SurrRoom Listening room Dry speech" src="assets/surrroom-04/dry.wav"></audio>
+          <a class="download" href="assets/surrroom-04/dry.wav" download>Download WAV <span aria-hidden="true">↗</span></a></div><div class="player gt"><div class="player-heading"><span class="dot"></span><h4>GT reverberant speech</h4></div>
+          <p>Reference · binaural</p><audio controls preload="none" data-role="gt" aria-label="SurrRoom Listening room GT reverberant speech" src="assets/surrroom-04/gt.wav"></audio>
+          <a class="download" href="assets/surrroom-04/gt.wav" download>Download WAV <span aria-hidden="true">↗</span></a></div><div class="player pred"><div class="player-heading"><span class="dot"></span><h4>Predicted reverberant speech</h4></div>
+          <p>FOA-Rec-RTF · binaural</p><audio controls preload="none" data-role="pred" aria-label="SurrRoom Listening room Predicted reverberant speech" src="assets/surrroom-04/pred.wav"></audio>
+          <a class="download" href="assets/surrroom-04/pred.wav" download>Download WAV <span aria-hidden="true">↗</span></a></div></div>
+      <div class="compare"><span>Compare at the same time position</span><div><button type="button" class="switch" data-switch="gt">Listen to GT</button><button type="button" class="switch primary" data-switch="pred">Listen to Predicted</button><button type="button" class="restart">↺ Restart pair</button></div></div>
+      <p class="playback-status" role="status" aria-live="polite"></p>
+      <details class="rir"><summary>View RIR comparison <span>4 channels · spectrograms &amp; waveforms</span></summary>
+        <div class="visuals"><div class="plot-toolbar"><div class="control-label">FOA channel <div class="segmented" role="group" aria-label="FOA channel"><button type="button" data-channel="W" aria-pressed="true">W</button><button type="button" data-channel="X" aria-pressed="false">X</button><button type="button" data-channel="Y" aria-pressed="false">Y</button><button type="button" data-channel="Z" aria-pressed="false">Z</button></div></div>
+        <div class="control-label">Waveform window <div class="segmented" role="group" aria-label="Waveform window"><button type="button" data-window="early" aria-pressed="true">Early</button><button type="button" data-window="full" aria-pressed="false">Full response</button></div></div></div>
+        <div class="spectrograms"><figure><figcaption>GT <span class="channel-name">W</span></figcaption><img data-plot="gt" width="824" height="391" alt=""></figure><figure><figcaption>Predicted <span class="channel-name">W</span></figcaption><img data-plot="pred" width="824" height="391" alt=""></figure></div>
+        <figure class="waveform"><figcaption>Waveform overlay <span class="window-name">Early · −8 to +80 ms</span></figcaption><img data-plot="wave" width="1647" height="378" alt=""></figure>
+        <p class="plot-note">GT: dark grey · Predicted: blue. Original W reference scale retained across channels. Shared STFT settings and fixed −100 to 0 dB color scale; no per-channel or per-image normalization. Early time is relative to aligned direct arrival.</p></div>
+      </details><p class="sample-note">4 s excerpt · paired gain ×0.9146. No background noise was added. Listening-only FOA yaw: -90°; the original measured source direction is front. EARS: p019/sentences_02_fast.</p>
+    </article><article class="sample" id="surrroom-06" data-plots="assets/surrroom-06">
+      <div class="sample-top"><div><p class="eyebrow">SAMPLE 06 <span> / Challenging condition</span></p><h3>Classical recording studio curtains open</h3></div><a class="permalink" href="#surrroom-06" aria-label="Link to sample 6"># 06</a></div>
+      <p class="case-id">case_14_left_surrroom_classical_recording_studio_curtains_open_d2_noisy</p>
+      <div class="tags"><span>Left · +90.0°</span><span>Paired noise · 21.3 dB SNR</span><span>GT decay to −20 dB: 214 ms</span></div>
+      <div class="players"><div class="player dry"><div class="player-heading"><span class="dot"></span><h4>Dry speech</h4></div>
+          <p>EARS · mono</p><audio controls preload="none" data-role="dry" aria-label="SurrRoom Classical recording studio curtains open Dry speech" src="assets/surrroom-06/dry.wav"></audio>
+          <a class="download" href="assets/surrroom-06/dry.wav" download>Download WAV <span aria-hidden="true">↗</span></a></div><div class="player gt"><div class="player-heading"><span class="dot"></span><h4>GT reverberant speech</h4></div>
+          <p>Reference · binaural</p><audio controls preload="none" data-role="gt" aria-label="SurrRoom Classical recording studio curtains open GT reverberant speech" src="assets/surrroom-06/gt.wav"></audio>
+          <a class="download" href="assets/surrroom-06/gt.wav" download>Download WAV <span aria-hidden="true">↗</span></a></div><div class="player pred"><div class="player-heading"><span class="dot"></span><h4>Predicted reverberant speech</h4></div>
+          <p>FOA-Rec-RTF · binaural</p><audio controls preload="none" data-role="pred" aria-label="SurrRoom Classical recording studio curtains open Predicted reverberant speech" src="assets/surrroom-06/pred.wav"></audio>
+          <a class="download" href="assets/surrroom-06/pred.wav" download>Download WAV <span aria-hidden="true">↗</span></a></div></div>
+      <div class="compare"><span>Compare at the same time position</span><div><button type="button" class="switch" data-switch="gt">Listen to GT</button><button type="button" class="switch primary" data-switch="pred">Listen to Predicted</button><button type="button" class="restart">↺ Restart pair</button></div></div>
+      <p class="playback-status" role="status" aria-live="polite"></p>
+      <details class="rir"><summary>View RIR comparison <span>4 channels · spectrograms &amp; waveforms</span></summary>
+        <div class="visuals"><div class="plot-toolbar"><div class="control-label">FOA channel <div class="segmented" role="group" aria-label="FOA channel"><button type="button" data-channel="W" aria-pressed="true">W</button><button type="button" data-channel="X" aria-pressed="false">X</button><button type="button" data-channel="Y" aria-pressed="false">Y</button><button type="button" data-channel="Z" aria-pressed="false">Z</button></div></div>
+        <div class="control-label">Waveform window <div class="segmented" role="group" aria-label="Waveform window"><button type="button" data-window="early" aria-pressed="true">Early</button><button type="button" data-window="full" aria-pressed="false">Full response</button></div></div></div>
+        <div class="spectrograms"><figure><figcaption>GT <span class="channel-name">W</span></figcaption><img data-plot="gt" width="824" height="391" alt=""></figure><figure><figcaption>Predicted <span class="channel-name">W</span></figcaption><img data-plot="pred" width="824" height="391" alt=""></figure></div>
+        <figure class="waveform"><figcaption>Waveform overlay <span class="window-name">Early · −8 to +80 ms</span></figcaption><img data-plot="wave" width="1647" height="378" alt=""></figure>
+        <p class="plot-note">GT: dark grey · Predicted: blue. Original W reference scale retained across channels. Shared STFT settings and fixed −100 to 0 dB color scale; no per-channel or per-image normalization. Early time is relative to aligned direct arrival.</p></div>
+      </details><p class="sample-note">4 s excerpt · paired gain ×1. The same GT-calibrated noise realization is included in both reverberant clips. Listening-only FOA yaw: 90°; the original measured source direction is front. EARS: p020/rainbow_06_lowpitch.</p>
+    </article></section></div>
+    <section id="protocol" class="protocol"><p class="eyebrow">ABOUT THESE EXAMPLES</p><h2>Listening &amp; comparison notes</h2>
+      <div class="notes-grid"><div><h3>One pair, one listening setup</h3><p>GT and Predicted use the same EARS speech context, FOA binaural decoder, HRTF and head pose. The supplied shared-gain audio is preserved without additional normalization. Dry speech is mono. Volume changes apply to every player.</p></div><div><h3>Illustrations with traceable selection</h3><p>Samples span rooms, directions and GT decay lengths. The lower-SNR SurrRoom example illustrates a challenging input condition. Selection does not use prediction error, and these six examples are not a statistical evaluation.</p></div></div>
+      <details><summary>Signal preparation and interpretation</summary><div class="protocol-detail"><p>The audio files are the original <code>shared_gain/gt_binaural.wav</code>, <code>shared_gain/a1_seed42_binaural.wav</code>, and <code>dry_ears.wav</code> exports. All are 16 kHz, 4 seconds long. GT and prediction share the same gain and, in noisy cases, the same GT-calibrated added noise.</p><p>The dry clip is an aligned excerpt of the longer EARS context used for the original estimate. These examples demonstrate replay using that speech context; they do not establish reuse with unseen speech. A cropped wet signal can also contain reverberation from speech preceding the dry excerpt.</p><p>HARP uses native source geometry. SurrRoom examples use a common listening-only yaw rotation of paired FOA signals; their displayed directions are not distinct measured source orientations. Positive azimuth points left.</p><p>Source RIR channel order is ACN/SN3D [W, Y, Z, X]; the selector presents W, X, Y, Z. Plots preserve exported sample amplitudes. All spectrograms use a 512-sample Hann window, 128-sample hop, 512-point FFT, zero boundary padding and a fixed magnitude scale of −100 to 0 dB relative to 1 in the exported W reference units. The waveform amplitude axis is shared by all four channels and both time windows within each case.</p><p>The decay badge measures time from the aligned direct arrival to −20 dB of backward-integrated GT W energy over the available response. It is a descriptive selection measure, not a fitted RT60 value. CUBE is omitted from this edition because its shorter GT support needs a separately matched, truncated-response comparison.</p></div></details>
+      <a class="manifest-link" href="selection.json" download>Download sample selection &amp; signal metadata <span aria-hidden="true">↗</span></a>
+    </section>
+  </main>
+  <footer><span>FOA-Rec-RTF</span><span>Listening samples · HARP / SurrRoom</span><a href="#">Back to top ↑</a></footer>
+  <noscript><p class="noscript">JavaScript is disabled. Native audio players remain available; synchronized switching and RIR controls require JavaScript.</p></noscript>
+</body>
+</html>
